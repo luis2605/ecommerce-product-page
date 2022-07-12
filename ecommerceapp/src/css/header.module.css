@@ -49,6 +49,11 @@
   margin: 0.3em 2em 0 1em;
 }
 
+li a:hover,
+li a:focus {
+  border-bottom: 2px solid var(--orange);
+}
+
 /*media queries*/
 
 @media (max-width: 426px) {

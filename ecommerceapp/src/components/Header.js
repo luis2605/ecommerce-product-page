@@ -23,6 +23,9 @@ const Header = (props) => {
   const closeMenu = (value) => {
     setMenuOpen(value);
   };
+  const cartOpenHandler = (value) => {
+    setCartOpen(value);
+  };
   return (
     <Fragment>
       <div className={classes["header-container"]}>
@@ -76,6 +79,7 @@ const Header = (props) => {
           onProductAmount={props.onProductAmount}
           onData={props.data}
           onProductAmountReset={props.onProductAmountReset}
+          onCartOpen={cartOpenHandler}
         />
       )}
     </Fragment>

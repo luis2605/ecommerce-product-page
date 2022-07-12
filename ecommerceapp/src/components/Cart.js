@@ -19,6 +19,7 @@ const Cart = (props) => {
 
   const cartReset = () => {
     props.onProductAmountReset(0);
+    props.onCartOpen(false);
     console.log(props);
   };
   const reducingLongNames = () => {
@@ -54,9 +55,9 @@ const Cart = (props) => {
           <div className={classes["description-price-total"]}>
             <p className={classes.gray}>{reducingLongNames()}</p>
             <div className={classes["price-total"]}>
-              <p className={classes.gray}>{pcRabatt()} x</p>
+              <p className={classes.gray}>${pcRabatt()} x</p>
               <p className={classes.amount}> {props.onProductAmount}</p>
-              <p> {addition()}</p>
+              <p> ${addition()}</p>
             </div>
           </div>
           <img onClick={cartReset} src={deleteBtn} alt="delete" />
